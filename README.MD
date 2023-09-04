@@ -26,8 +26,8 @@
 - and add below 'if Drops[dropId].items[slot] and Drops[dropId].items[slot].name == itemName then'
 ```lua
 if itemName == "cash" then
-	local Player = QBCore.Functions.GetPlayer(source)
-	Player.Functions.AddMoney("cash", amount, "take-dropped-cash")
+    local Player = QBCore.Functions.GetPlayer(source)
+    Player.Functions.AddMoney("cash", amount, "take-dropped-cash")
 end
 ```
 
@@ -36,8 +36,8 @@ end
 - add below `Drops[dropId].items[toSlot] = {}`
 ```lua
 if itemInfo["name"] == "cash" then
-	local Player = QBCore.Functions.GetPlayer(source)
-	Player.Functions.RemoveMoney("cash", itemAmount, "drop-cash")
+    local Player = QBCore.Functions.GetPlayer(source)
+    Player.Functions.RemoveMoney("cash", itemAmount, "drop-cash")
 end
 ```
 
