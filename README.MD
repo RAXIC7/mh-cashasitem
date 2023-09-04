@@ -22,8 +22,8 @@
 
 
 # Edit qb-inventory/server/main.lua
-- find the function 'RemoveFromDrop' 
-- and add below 'if Drops[dropId].items[slot] and Drops[dropId].items[slot].name == itemName then'
+- find the function `RemoveFromDrop` 
+- and add below `if Drops[dropId].items[slot] and Drops[dropId].items[slot].name == itemName then`
 ```lua
 if itemName == "cash" then
     local Player = QBCore.Functions.GetPlayer(source)
@@ -32,7 +32,7 @@ end
 ```
 
 # Add in qb-inventory/server/main.lua
-- find 'CreateNewDrop' 
+- find `CreateNewDrop` 
 - add below `Drops[dropId].items[toSlot] = {}`
 ```lua
 if itemInfo["name"] == "cash" then
