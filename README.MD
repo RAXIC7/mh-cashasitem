@@ -32,7 +32,7 @@ end
 ```
 
 # Add in qb-inventory/server/main.lua
-- find `CreateNewDrop` 
+- find 'CreateNewDrop' 
 - add below `Drops[dropId].items[toSlot] = {}`
 ```lua
 if itemInfo["name"] == "cash" then
