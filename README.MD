@@ -21,6 +21,27 @@
 ```
 
 
+# Edit qb-inventory/server/main.lua
+- find the function 'RemoveFromDrop' 
+- and add below 'if Drops[dropId].items[slot] and Drops[dropId].items[slot].name == itemName then'
+```lua
+if itemName == "cash" then
+	local Player = QBCore.Functions.GetPlayer(source)
+	Player.Functions.AddMoney("cash", amount, "take-dropped-cash")
+end
+```
+
+# Add in qb-inventory/server/main.lua
+- find `CreateNewDrop` 
+- add below `Drops[dropId].items[toSlot] = {}`
+```lua
+if itemInfo["name"] == "cash" then
+	local Player = QBCore.Functions.GetPlayer(source)
+	Player.Functions.RemoveMoney("cash", itemAmount, "drop-cash")
+end
+```
+
+
 ## 🙈 Youtube & Discord
 - [Youtube](https://www.youtube.com/c/MaDHouSe79)
 - [Discord](https://discord.gg/cEMSeE9dgS)
