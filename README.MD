@@ -7,7 +7,7 @@
 ```lua
 -- drop item block
 if itemData.name == 'cash' then 
-   return QBCore.Functions.Notify(source, "You can't drop money", "error") 
+   return QBCore.Functions.Notify(source, "You can't drop cash on the ground!", "error") 
 end
 ```
 
