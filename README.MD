@@ -36,7 +36,6 @@ end
 - add below `Drops[dropId].items[toSlot] = {}`
 ```lua
 if itemInfo["name"] == "cash" then
-    local Player = QBCore.Functions.GetPlayer(source)
     Player.Functions.RemoveMoney("cash", itemAmount, "drop-cash")
 end
 ```
