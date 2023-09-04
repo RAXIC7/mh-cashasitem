@@ -4,14 +4,14 @@
 # Add in `[qb]/qb-inventory/server/main.lua`
 ```lua
 local function UpdateCashItem(source, amount, mode)
-	local src = source
-	local Player = QBCore.Functions.GetPlayer(src)
-	if mode == 'add' then
-		Player.Functions.AddMoney("cash", amount, "take-cash") 
-	end
-	if mode == "remove" and Player.Functions.GetMoney('cash') >= amount then 
-		Player.Functions.RemoveMoney("cash", amount, "remove-cash") 
-	end
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if mode == 'add' then
+        Player.Functions.AddMoney("cash", amount, "take-cash") 
+    end
+    if mode == "remove" and Player.Functions.GetMoney('cash') >= amount then 
+        Player.Functions.RemoveMoney("cash", amount, "remove-cash") 
+    end
 end
 ```
 # Find the function `RemoveFromDrop` 
@@ -26,7 +26,7 @@ end
 - add this below after `AddItem(src, fromItemData.name, fromAmount, toSlot, fromItemData.info)`
 ```lua
 if itemInfo["name"] == "cash" then
-	UpdateCashItem(src, fromAmount, "add")
+    UpdateCashItem(src, fromAmount, "add")
 end
 ```
 
@@ -34,7 +34,7 @@ end
 - below `AddToDrop(toInventory, toSlot, itemInfo["name"], fromAmount, fromItemData.info)`
 ```lua
 if itemInfo["name"] == "cash" then
-	UpdateCashItem(src, fromAmount, "add")
+    UpdateCashItem(src, fromAmount, "add")
 end
 ```
 
