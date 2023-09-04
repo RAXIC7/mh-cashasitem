@@ -13,8 +13,8 @@
     ['type'] = 'item', 
     ['image'] = 'cash.png', 
     ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
+    ['useable'] = false,
+    ['shouldClose'] = false,
     ['combinable'] = nil,
     ['description'] = 'Cash'
 },
