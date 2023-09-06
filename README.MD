@@ -3,7 +3,7 @@
 
 # Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
-- [mh-inventiory](https://github.com/MaDHouSe79/mh-inventory)
+- [qb-inventiory](https://github.com/MaDHouSe79/qb-inventory)
 
 # Video
 https://www.youtube.com/watch?v=sWYkV-PeqU4
