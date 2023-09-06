@@ -1,6 +1,10 @@
 # mh-cashasitem
 - use cash as item!
 
+# Video
+-- https://www.youtube.com/watch?v=sWYkV-PeqU4
+
+
 # Find the `RegisterNetEvent` `inventory:server:SetInventoryData`
 - Replace that code with this code below, and make cure you backup the old code.
 ```lua
