@@ -46,7 +46,8 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 					end
 				else
 					local itemInfo = QBCore.Shared.Items[fromItemData.name:lower()]
-					if fromItemData.name:lower() == "cash" then 
+					if fromItemData.name:lower() == "cash" then
+						TriggerEvent('mh-cashasitem:server:updateCash', playerId, fromItemData.amount, "add") 
 						TriggerEvent('mh-cashasitem:server:updateCash', src, fromItemData.amount, "remove") 
 					end
 					TriggerEvent("qb-log:server:CreateLog", "robbing", "Dropped Item", "red", "**".. GetPlayerName(src) .. "** (citizenid: *"..Player.PlayerData.citizenid.."* | *"..src.."*) dropped new item; name: **"..itemInfo["name"].."**, amount: **" .. fromAmount .. "** to player: **".. GetPlayerName(OtherPlayer.PlayerData.source) .. "** (citizenid: *"..OtherPlayer.PlayerData.citizenid.."* | id: *"..OtherPlayer.PlayerData.source.."*)")
