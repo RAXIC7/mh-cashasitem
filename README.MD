@@ -32,9 +32,6 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 					end
 				end
 				AddItem(src, fromItemData.name, fromAmount, toSlot, fromItemData.info)
-				if fromItemData.name:lower() == "cash" then
-					TriggerEvent('mh-cashasitem:server:updateCash', src, fromAmount, "add")
-				end
 			elseif QBCore.Shared.SplitStr(toInventory, "-")[1] == "otherplayer" then
 				local playerId = tonumber(QBCore.Shared.SplitStr(toInventory, "-")[2])
 				local OtherPlayer = QBCore.Functions.GetPlayer(playerId)
@@ -221,9 +218,6 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 					TriggerEvent("qb-log:server:CreateLog", "robbing", "Retrieved Item", "green", "**".. GetPlayerName(src) .. "** (citizenid: *"..Player.PlayerData.citizenid.."* | id: *"..src.."*) took item; name: **"..fromItemData.name.."**, amount: **" .. fromAmount .. "** from player: **".. GetPlayerName(OtherPlayer.PlayerData.source) .. "** (citizenid: *"..OtherPlayer.PlayerData.citizenid.."* | *"..OtherPlayer.PlayerData.source.."*)")
 				end
 				AddItem(src, fromItemData.name, fromAmount, toSlot, fromItemData.info)
-				if fromItemData.name:lower() == "cash" then
-					TriggerEvent('mh-cashasitem:server:updateCash', src, fromAmount, "add")
-				end
 			else
 				local toItemData = OtherPlayer.PlayerData.items[toSlot]
 				RemoveItem(playerId, itemInfo["name"], fromAmount, fromSlot)
