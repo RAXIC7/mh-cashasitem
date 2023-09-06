@@ -1,11 +1,14 @@
 # mh-cashasitem
 - use cash as item!
 
+# Dependencies
+- [qb-core](https://github.com/qbcore-framework/qb-core)
+- [mh-inventiory](https://github.com/MaDHouSe79/mh-inventory)
+
 # Video
--- https://www.youtube.com/watch?v=sWYkV-PeqU4
+https://www.youtube.com/watch?v=sWYkV-PeqU4
 
-
-# Find the `RegisterNetEvent` `inventory:server:SetInventoryData`
+# Find the `RegisterNetEvent` `inventory:server:SetInventoryData` (only if you don't use mh-inventory)
 - Replace that code with this code below, and make cure you backup the old code.
 ```lua
 RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, toInventory, fromSlot, toSlot, fromAmount, toAmount)
