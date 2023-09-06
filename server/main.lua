@@ -1,5 +1,8 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+--[[ ===================================================== ]]--
+--[[           MH Cash As Item Script by MaDHouSe          ]]--
+--[[ ===================================================== ]]--
 
+local QBCore = exports['qb-core']:GetCoreObject()
 local useCashAsItem = true -- true if you want to use cash as item
 local cashItem = "cash"    -- the cash item for the inventory
 
