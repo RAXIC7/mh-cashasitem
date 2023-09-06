@@ -1,3 +1,7 @@
+--[[ ===================================================== ]]--
+--[[           MH Cash As Item Script by MaDHouSe          ]]--
+--[[ ===================================================== ]]--
+
 local script = GetCurrentResourceName()
 
 local function checkVersion(err, responseText, headers)
